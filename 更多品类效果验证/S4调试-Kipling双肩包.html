@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S4 调试 · Kipling 双肩包 · 内容策略组合报告</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#faf8f5;color:#2b2b2b;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:1100px;margin:0 auto;}
+  .hero{background:linear-gradient(135deg,#3f3a4e 0%,#5b5468 55%,#7a7287 100%);color:#fff;border-radius:16px;padding:26px 30px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06);}
+  .hero .brand{font-size:13px;letter-spacing:2px;opacity:.85;font-weight:600;}
+  .hero h1{font-size:24px;margin:6px 0 2px;font-weight:700;}
+  .hero .model{font-size:14px;opacity:.92;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-size:12.5px;}
+  .chip b{font-weight:700;}
+  .imgs{display:flex;gap:12px;margin-top:14px;}
+  .imgs img{flex:1;min-width:0;border-radius:10px;max-height:180px;object-fit:cover;display:block;}
+  .how{margin-top:14px;background:#f4f0ea;border-radius:10px;padding:10px 15px;font-size:12.5px;color:#5a5148;}
+  .how b{color:#3d332b;}
+  .sec-title{font-size:17px;font-weight:700;margin:24px 0 10px;color:#3d332b;}
+  .sec-title .st{font-size:12px;font-weight:600;color:#fff;background:#7a7287;border-radius:6px;padding:2px 8px;margin-right:8px;vertical-align:2px;}
+  .mat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:14px 16px;overflow-x:auto;}
+  table.mx{width:100%;border-collapse:collapse;font-size:12.5px;min-width:680px;}
+  .mx th{background:#f2f0f6;color:#3f3a4e;font-weight:700;padding:8px 10px;border:1px solid #e2dfea;text-align:center;}
+  .mx th.corner{text-align:left;}
+  .mx td{border:1px solid #e2dfea;padding:8px 10px;text-align:center;vertical-align:middle;color:#4a453f;}
+  .mx td.scene{text-align:left;font-weight:700;color:#3d332b;white-space:nowrap;}
+  .cell-top{font-size:12px;font-weight:800;color:#3f3a4e;display:block;}
+  .cell-sub{font-size:11px;color:#8a8178;display:block;margin-top:2px;}
+  .cell-cut{color:#c9c2b8;}
+  .picked{background:#f6f3fb;}
+  .legend{font-size:12px;color:#8a8178;margin-top:8px;}
+  .strat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:15px 18px;margin-bottom:11px;box-shadow:0 2px 8px rgba(90,70,50,.05);}
+  .shead{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .sname{font-size:16px;font-weight:800;color:#3d332b;}
+  .rank{font-size:11.5px;font-weight:800;border-radius:6px;padding:2px 9px;color:#fff;}
+  .r-top{background:#3f3a4e;} .r-test{background:#8a8198;}
+  .combo{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 6px;}
+  .combo span{font-size:12px;border-radius:999px;padding:2px 10px;font-weight:600;}
+  .c-p{background:#f6efe8;color:#7a5a3a;}
+  .c-b{background:#e8f0fe;color:#1f4a8a;}
+  .c-s{background:#e3f2e8;color:#1f7a4d;}
+  .rowline{font-size:13px;color:#4a453f;margin:5px 0;line-height:1.6;}
+  .rowline b{color:#3d332b;}
+  .rowline .lb{display:inline-block;min-width:5.6em;color:#8a8178;font-weight:700;font-size:12.5px;}
+  .shoot{font-size:12.5px;background:#f7f3ec;border-radius:8px;padding:7px 11px;color:#5a5148;margin:6px 0;line-height:1.6;}
+  .shoot .hk{color:#3f3a4e;font-weight:700;}
+  .scoreline{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:#6f675e;margin-top:6px;}
+  .bar{width:54px;height:6px;border-radius:3px;background:#eee;overflow:hidden;}
+  .bar i{display:block;height:100%;border-radius:3px;background:#3f3a4e;}
+  .num{font-weight:800;color:#3d332b;}
+  .kpi{font-size:12px;color:#33475f;background:#eef4ff;border-radius:6px;padding:2px 9px;display:inline-block;margin-top:4px;}
+  .kpi b{color:#1f4a8a;}
+  .todo{background:#fdf6ec;border:1px solid #ecdfc8;border-radius:10px;padding:11px 15px;font-size:13px;color:#6f5130;margin-top:14px;}
+  .todo b{color:#8a5a1a;}
+  .foot{font-size:11.5px;color:#a29a90;margin-top:20px;padding-top:12px;border-top:1px solid #e5dfd6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="brand">KIPLING 凯浦林 · 官方旗舰店</div>
+    <h1>经典双肩背包（浅米/浅灰）</h1>
+    <div class="model">S4 内容策略组合报告 · 输入 = S1 买点 × S2 人群 × S3 场景（调试版）</div>
+    <div class="chips">
+      <span class="chip">轻得像云朵（用户原话）</span>
+      <span class="chip">巨能装 + 分区收纳</span>
+      <span class="chip">毛绒猴子挂件 · 辨识度</span>
+      <span class="chip">耐磨防泼水</span>
+      <span class="chip">宽肩带不勒肩</span>
+    </div>
+    <div class="imgs">
+      <img src="/Users/zhentao/Doubao/chats/2026-10-28/new-chat-6/kipling-front.jpg" alt="Kipling 双肩包正面图">
+      <img src="/Users/zhentao/Doubao/chats/2026-10-28/new-chat-6/kipling-wear.jpg" alt="Kipling 双肩包上身图">
+    </div>
+  </div>
+
+  <div class="how"><b>原料来源：</b>S3 调试产物（new-chat-6）· 本产品最大发现：<b>"轻"是内容侧第一卖点（"轻得像感觉不到重量"3.9 万赞），官方图反而没写</b> · 买点 Tier/人群打分按调试口径补齐。</div>
+
+  <div class="sec-title"><span class="st">组合矩阵</span>主攻场景 × 主攻人群 → 命中买点</div>
+  <div class="mat">
+    <table class="mx">
+      <tr><th class="corner">场景 ＼ 人群</th><th>通勤上班族（背电脑）</th><th>学生党</th></tr>
+      <tr><td class="scene">SC-01 通勤早八开包装物</td><td class="picked"><span class="cell-top">BP-01 轻 + BP-02 能装</span><span class="cell-sub">ST-01 · 28 分</span></td><td class="cell-cut">—</td></tr>
+      <tr><td class="scene">SC-02 开学/图书馆选包</td><td class="cell-cut">—</td><td class="picked"><span class="cell-top">BP-01 轻 + BP-03 一包多场合</span><span class="cell-sub">ST-02 · 24 分</span></td></tr>
+      <tr><td class="scene">SC-03 短途差旅一包就走</td><td class="picked"><span class="cell-top">BP-03 一包多场合</span><span class="cell-sub">ST-03 · 20 分</span></td><td class="cell-cut">—</td></tr>
+      <tr><td class="scene">SC-04 雨天通勤泼水实测</td><td class="picked"><span class="cell-top">BP-04 防泼水</span><span class="cell-sub">ST-04 · 19 分</span></td><td class="cell-cut">—</td></tr>
+    </table>
+    <div class="legend">高亮 = 进入 Top；通勤背电脑是主战场，学生党承接开学季场景</div>
+  </div>
+
+  <div class="sec-title"><span class="st">Top 4</span>优先测试方向</div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-01 通勤早八 · 开包装物（轻得像没背）</span><span class="rank r-top">TOP 1</span></div>
+    <div class="combo"><span class="c-p">通勤上班族（背电脑）</span><span class="c-b">BP-01 轻 + BP-02 能装</span><span class="c-s">SC-01 通勤早八开包</span></div>
+    <div class="rowline"><span class="lb">拍法</span>家门口单手拎包轻抛（对比同事单肩包皱眉）；开包逐层装：电脑、平板、水杯、伞、防晒衣，"还有空间"。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"通勤背电脑的姐妹，这包轻得像没背"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"轻得像感觉不到重量"3.9 万赞——官方图没写的第一卖点被内容侧补出；双肩包合集 3.8 万赞；通勤背电脑人群刚需最硬。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:100%"></i></div><span class="num">10</span></span><span class="score-item">契合 <div class="bar"><i style="width:100%"></i></div><span class="num">10</span></span><span class="score-item">爆款 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">总分 <span class="num">28</span></span></div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 评论区"求链接" · 主页进店率</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-02 开学/图书馆 · 选包攻略</span><span class="rank r-top">TOP 2</span></div>
+    <div class="combo"><span class="c-p">学生党</span><span class="c-b">BP-01 轻 + BP-03 一包多场合</span><span class="c-s">SC-02 开学图书馆选包</span></div>
+    <div class="rowline"><span class="lb">拍法</span>宿舍书桌前学姐式口播：选包 3 点（能装电脑、不勒肩、能出席所有场合）；切图书馆背包装满书和水杯依然挺括。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"研究生选包攻略：一个包从图书馆背到面试"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>研究生选包 2.6k 赞；开学季内容密集；"一包多场合"是学生党预算友好的决策理由。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">契合 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">爆款 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">总分 <span class="num">24</span></span></div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 收藏率 · 评论区"考研/开学"自报</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-03 短途差旅 · 一包就走</span><span class="rank r-test">TOP 3</span></div>
+    <div class="combo"><span class="c-p">通勤上班族</span><span class="c-b">BP-03 一包多场合</span><span class="c-s">SC-03 短途差旅</span></div>
+    <div class="rowline"><span class="lb">拍法</span>高铁车厢从包里掏出电脑、化妆包、水杯；到站直接背走。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"2 天出差一个包搞定，说走就走"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>Kipling 用户"旅行通勤都封神""一包在手说走就走"；但差旅场景人群窄于通勤，放第三顺位。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">契合 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">爆款 <div class="bar"><i style="width:60%"></i></div><span class="num">6</span></span><span class="score-item">总分 <span class="num">20</span></span></div>
+    <span class="kpi">测试指标：<b>完播率 · 收藏率</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-04 雨天通勤 · 泼水实测</span><span class="rank r-test">TOP 4</span></div>
+    <div class="combo"><span class="c-p">通勤上班族</span><span class="c-b">BP-04 防泼水</span><span class="c-s">SC-04 雨天泼水</span></div>
+    <div class="rowline"><span class="lb">拍法</span>雨天街边直接往包上泼水，水珠滚落；擦一擦如新，电脑无恙。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"下雨天通勤，这包水泼上去都不怕"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>防泼水是 Kipling 用户高频验证点；实测型内容完播钩子强，但单卖点偏窄，适合做补充素材。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">契合 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">爆款 <div class="bar"><i style="width:50%"></i></div><span class="num">5</span></span><span class="score-item">总分 <span class="num">19</span></span></div>
+    <span class="kpi">测试指标：<b>完播率 · 点赞率</b></span>
+  </div>
+
+  <div class="todo"><b>风险提示：</b>①"轻"是第一卖点但需量化锚点（实际克重 vs 竞品），避免空口说轻；②毛绒猴子挂件是品牌辨识度资产，建议在内容中高频露出形成记忆点；③"能装"需与"轻"平衡话术，避免"轻但装不下"质疑。</div>
+
+  <div class="foot">S4 调试产物 · 原料 = S3 调试场景卡（new-chat-6/S3调试-Kipling双肩包.html）· 内容侧证据检索于 2026-10-28</div>
+</div>
+</body>
+</html>

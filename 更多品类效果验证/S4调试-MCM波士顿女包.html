@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S4 调试 · MCM ELLA 迷你波士顿包 · 内容策略组合报告</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#faf8f5;color:#2b2b2b;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:1100px;margin:0 auto;}
+  .hero{background:linear-gradient(135deg,#3a2f24 0%,#57432f 55%,#74593a 100%);color:#fff;border-radius:16px;padding:26px 30px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06);}
+  .hero .brand{font-size:13px;letter-spacing:2px;opacity:.85;font-weight:600;}
+  .hero h1{font-size:24px;margin:6px 0 2px;font-weight:700;}
+  .hero .model{font-size:14px;opacity:.92;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-size:12.5px;}
+  .chip b{font-weight:700;}
+  .imgs{display:flex;gap:12px;margin-top:14px;}
+  .imgs img{flex:1;min-width:0;border-radius:10px;max-height:180px;object-fit:cover;display:block;}
+  .how{margin-top:14px;background:#f4f0ea;border-radius:10px;padding:10px 15px;font-size:12.5px;color:#5a5148;}
+  .how b{color:#3d332b;}
+  .sec-title{font-size:17px;font-weight:700;margin:24px 0 10px;color:#3d332b;}
+  .sec-title .st{font-size:12px;font-weight:600;color:#fff;background:#74593a;border-radius:6px;padding:2px 8px;margin-right:8px;vertical-align:2px;}
+  .mat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:14px 16px;overflow-x:auto;}
+  table.mx{width:100%;border-collapse:collapse;font-size:12.5px;min-width:680px;}
+  .mx th{background:#f7f0e8;color:#57432f;font-weight:700;padding:8px 10px;border:1px solid #ece0d2;text-align:center;}
+  .mx th.corner{text-align:left;}
+  .mx td{border:1px solid #ece0d2;padding:8px 10px;text-align:center;vertical-align:middle;color:#4a453f;}
+  .mx td.scene{text-align:left;font-weight:700;color:#3d332b;white-space:nowrap;}
+  .cell-top{font-size:12px;font-weight:800;color:#57432f;display:block;}
+  .cell-sub{font-size:11px;color:#8a8178;display:block;margin-top:2px;}
+  .cell-cut{color:#c9c2b8;}
+  .picked{background:#fbf6ee;}
+  .legend{font-size:12px;color:#8a8178;margin-top:8px;}
+  .strat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:15px 18px;margin-bottom:11px;box-shadow:0 2px 8px rgba(90,70,50,.05);}
+  .shead{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .sname{font-size:16px;font-weight:800;color:#3d332b;}
+  .rank{font-size:11.5px;font-weight:800;border-radius:6px;padding:2px 9px;color:#fff;}
+  .r-top{background:#57432f;} .r-test{background:#8a6d4e;}
+  .combo{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 6px;}
+  .combo span{font-size:12px;border-radius:999px;padding:2px 10px;font-weight:600;}
+  .c-p{background:#f6efe8;color:#7a5a3a;}
+  .c-b{background:#e8f0fe;color:#1f4a8a;}
+  .c-s{background:#e3f2e8;color:#1f7a4d;}
+  .rowline{font-size:13px;color:#4a453f;margin:5px 0;line-height:1.6;}
+  .rowline b{color:#3d332b;}
+  .rowline .lb{display:inline-block;min-width:5.6em;color:#8a8178;font-weight:700;font-size:12.5px;}
+  .shoot{font-size:12.5px;background:#f7f3ec;border-radius:8px;padding:7px 11px;color:#5a5148;margin:6px 0;line-height:1.6;}
+  .shoot .hk{color:#57432f;font-weight:700;}
+  .scoreline{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:#6f675e;margin-top:6px;}
+  .bar{width:54px;height:6px;border-radius:3px;background:#eee;overflow:hidden;}
+  .bar i{display:block;height:100%;border-radius:3px;background:#57432f;}
+  .num{font-weight:800;color:#3d332b;}
+  .kpi{font-size:12px;color:#33475f;background:#eef4ff;border-radius:6px;padding:2px 9px;display:inline-block;margin-top:4px;}
+  .kpi b{color:#1f4a8a;}
+  .todo{background:#fdf6ec;border:1px solid #ecdfc8;border-radius:10px;padding:11px 15px;font-size:13px;color:#6f5130;margin-top:14px;}
+  .todo b{color:#8a5a1a;}
+  .foot{font-size:11.5px;color:#a29a90;margin-top:20px;padding-top:12px;border-top:1px solid #e5dfd6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="brand">MSM · MCM ELLA 波士顿女包</div>
+    <h1>迷你波士顿包（经典 Monogram）</h1>
+    <div class="model">S4 内容策略组合报告 · 输入 = S1 买点 × S2 人群 × S3 场景（调试版）</div>
+    <div class="chips">
+      <span class="chip">经典 Monogram 满印</span>
+      <span class="chip">迷你 19×15 · 小包大容量</span>
+      <span class="chip">可斜挎可手提 · 可拆卸肩带</span>
+      <span class="chip">金色五金 · 菱形皮牌</span>
+    </div>
+    <div class="imgs"><img src="/Users/zhentao/Doubao/chats/2026-10-28/new-chat-6/mcm-main.jpg" alt="MCM 波士顿包斜挎图"></div>
+  </div>
+
+  <div class="how"><b>原料来源：</b>S3 调试产物（new-chat-6）· 本产品最大发现：<b>"真假辨别避坑"是商家没写但内容侧大火的方向</b>（真假对比 242 赞、差价 10 倍 64 赞）· 买点 Tier/人群打分按调试口径补齐。</div>
+
+  <div class="sec-title"><span class="st">组合矩阵</span>主攻场景 × 主攻人群 → 命中买点</div>
+  <div class="mat">
+    <table class="mx">
+      <tr><th class="corner">场景 ＼ 人群</th><th>小个子精致出街党</th><th>约会逛街党</th><th>轻奢入门党</th></tr>
+      <tr><td class="scene">SC-01 柜姐尺寸测评</td><td class="picked"><span class="cell-top">BP-02 小包大容量</span><span class="cell-sub">ST-01 · 25 分</span></td><td class="cell-cut">—</td><td class="picked"><span class="cell-top">BP-02</span><span class="cell-sub">并入 ST-01</span></td></tr>
+      <tr><td class="scene">SC-02 约会逛街精致氛围感</td><td class="picked"><span class="cell-top">BP-03 多背法 + BP-01 辨识度</span><span class="cell-sub">ST-02 · 24 分</span></td><td class="picked"><span class="cell-top">BP-01/03</span><span class="cell-sub">并入 ST-02</span></td><td class="cell-cut">—</td></tr>
+      <tr><td class="scene">SC-03 轻奢避坑·真假辨别</td><td class="cell-cut">—</td><td class="cell-cut">—</td><td class="picked"><span class="cell-top">BP-04 正品信任（新挖）</span><span class="cell-sub">ST-03 · 23 分</span></td></tr>
+      <tr><td class="scene">SC-04 通勤轻奢小号实用</td><td class="cell-cut">—</td><td class="cell-cut">—</td><td class="picked"><span class="cell-top">BP-02</span><span class="cell-sub">ST-04 · 19 分</span></td></tr>
+    </table>
+    <div class="legend">高亮 = 进入 Top；SC-03 真假辨别是内容侧挖掘出的蓝海方向（商品资料完全没写）</div>
+  </div>
+
+  <div class="sec-title"><span class="st">Top 4</span>优先测试方向</div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-01 柜姐尺寸测评 · 迷你还是小号</span><span class="rank r-top">TOP 1</span></div>
+    <div class="combo"><span class="c-p">小个子精致出街 × 轻奢入门</span><span class="c-b">BP-02 小包大容量</span><span class="c-s">SC-01 柜姐尺寸测评</span></div>
+    <div class="rowline"><span class="lb">拍法</span>柜姐式口播：迷你 19×15 尺寸展示、手机口红气垫钥匙一样样塞进去"刚好塞满"；"身高 150 左右闭眼冲"；斜挎/手提切换。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"MCM 迷你还是小号？一条视频讲明白"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"MCM 波士顿迷你🆚小号实测"内容已验证（迷你=约会逛街精致氛围感）；"柜姐全尺寸教学"98 赞；尺寸纠结是轻奢包第一大决策门槛，强搜索属性。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">契合 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">爆款 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">总分 <span class="num">25</span></span></div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 搜索流量占比 · 主页进店率</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-02 约会逛街 · 精致氛围感</span><span class="rank r-top">TOP 2</span></div>
+    <div class="combo"><span class="c-p">小个子精致出街 × 约会逛街党</span><span class="c-b">BP-03 多背法 + BP-01 辨识度</span><span class="c-s">SC-02 约会逛街</span></div>
+    <div class="rowline"><span class="lb">拍法</span>街拍低机位 + 迷你包斜挎上身（小个子友好），掏出手机口红一气呵成；闺蜜问"这包好好看"。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"小个子的精致氛围感，一个迷你包就够了"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>柜姐原话"适合约会、逛街、追求精致氛围感"；MCM 穿搭内容密集；Monogram 辨识度是轻奢出片的核心资产。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">契合 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">爆款 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">总分 <span class="num">24</span></span></div>
+    <span class="kpi">测试指标：<b>点赞率 · 评论区互动 · 主页进店率</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-03 轻奢避坑 · 真假辨别教学</span><span class="rank r-test">TOP 3</span></div>
+    <div class="combo"><span class="c-p">轻奢入门党（商家没发现的蓝海）</span><span class="c-b">BP-04 正品信任（新挖）</span><span class="c-s">SC-03 真假辨别</span></div>
+    <div class="rowline"><span class="lb">拍法</span>两只包并排（正 vs 仿）逐细节对比：皮牌、五金、侧面弧度、肩带卡位；"勾货行业太卷，教你避坑"。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"MCM 波士顿真假差 10 倍，区别在哪？"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>真假对比 242 赞、真假 10 倍差价 64 赞——MCM 品类高互动内容方向，商品资料完全没写；天然带"防坑"信任价值 + 强完播钩子；唯一注意：需用官方正品素材，避免引发侵权争议。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">契合 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">爆款 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">总分 <span class="num">23</span></span></div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 收藏率 · 评论区"求鉴别"</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-04 通勤轻奢 · 小号更实用</span><span class="rank r-test">TOP 4</span></div>
+    <div class="combo"><span class="c-p">轻奢入门党</span><span class="c-b">BP-02 小包大容量</span><span class="c-s">SC-04 通勤轻奢</span></div>
+    <div class="rowline"><span class="lb">拍法</span>通勤开包：小号装充电宝、小伞、彩妆全套逐一展示，通勤路上背。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"通勤实用选小号，轻奢也能很能装"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>柜姐原话"小号：通勤党友好、可放充电宝小伞彩妆全套"；但通勤人群与迷你款定位有张力，放第四顺位。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">契合 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">爆款 <div class="bar"><i style="width:50%"></i></div><span class="num">5</span></span><span class="score-item">总分 <span class="num">19</span></span></div>
+    <span class="kpi">测试指标：<b>完播率 · 收藏率 · 通勤人群转化</b></span>
+  </div>
+
+  <div class="todo"><b>风险提示：</b>①真假辨别内容若由品牌方发布，注意话术（"教你看正品细节"而非"打假仿品"），避免法律与平台规则风险；②迷你款容量有限，"通勤实用"方向与迷你定位存在张力，口播需克制；③轻奢品类需核对授权资质与价格锚点（同源差价话题）。</div>
+
+  <div class="foot">S4 调试产物 · 原料 = S3 调试场景卡（new-chat-6/S3调试-MCM波士顿女包.html）· 内容侧证据检索于 2026-10-28</div>
+</div>
+</body>
+</html>

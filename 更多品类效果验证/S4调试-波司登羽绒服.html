@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S4 调试 · 波司登羽绒服（互联网热卖）· 内容策略组合报告</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#faf8f5;color:#2b2b2b;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:1100px;margin:0 auto;}
+  .hero{background:linear-gradient(135deg,#7a1f1f 0%,#a83232 55%,#c95a5a 100%);color:#fff;border-radius:16px;padding:26px 30px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06);}
+  .hero .brand{font-size:13px;letter-spacing:2px;opacity:.85;font-weight:600;}
+  .hero h1{font-size:24px;margin:6px 0 2px;font-weight:700;}
+  .hero .model{font-size:14px;opacity:.92;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-size:12.5px;}
+  .chip b{font-weight:700;}
+  .how{margin-top:14px;background:#f4f0ea;border-radius:10px;padding:10px 15px;font-size:12.5px;color:#5a5148;}
+  .how b{color:#3d332b;}
+  .sec-title{font-size:17px;font-weight:700;margin:24px 0 10px;color:#3d332b;}
+  .sec-title .st{font-size:12px;font-weight:600;color:#fff;background:#a83232;border-radius:6px;padding:2px 8px;margin-right:8px;vertical-align:2px;}
+  .mat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:14px 16px;overflow-x:auto;}
+  table.mx{width:100%;border-collapse:collapse;font-size:12.5px;min-width:680px;}
+  .mx th{background:#fbeeee;color:#7a1f1f;font-weight:700;padding:8px 10px;border:1px solid #f0dddd;text-align:center;}
+  .mx th.corner{text-align:left;}
+  .mx td{border:1px solid #f0dddd;padding:8px 10px;text-align:center;vertical-align:middle;color:#4a453f;}
+  .mx td.scene{text-align:left;font-weight:700;color:#3d332b;white-space:nowrap;}
+  .cell-top{font-size:12px;font-weight:800;color:#7a1f1f;display:block;}
+  .cell-sub{font-size:11px;color:#8a8178;display:block;margin-top:2px;}
+  .cell-cut{color:#c9c2b8;}
+  .picked{background:#fdf4f4;}
+  .legend{font-size:12px;color:#8a8178;margin-top:8px;}
+  .strat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:15px 18px;margin-bottom:11px;box-shadow:0 2px 8px rgba(90,70,50,.05);}
+  .shead{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .sname{font-size:16px;font-weight:800;color:#3d332b;}
+  .rank{font-size:11.5px;font-weight:800;border-radius:6px;padding:2px 9px;color:#fff;}
+  .r-top{background:#a83232;} .r-test{background:#c95a5a;}
+  .combo{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 6px;}
+  .combo span{font-size:12px;border-radius:999px;padding:2px 10px;font-weight:600;}
+  .c-p{background:#f6efe8;color:#7a5a3a;}
+  .c-b{background:#e8f0fe;color:#1f4a8a;}
+  .c-s{background:#e3f2e8;color:#1f7a4d;}
+  .rowline{font-size:13px;color:#4a453f;margin:5px 0;line-height:1.6;}
+  .rowline b{color:#3d332b;}
+  .rowline .lb{display:inline-block;min-width:5.6em;color:#8a8178;font-weight:700;font-size:12.5px;}
+  .shoot{font-size:12.5px;background:#f7f3ec;border-radius:8px;padding:7px 11px;color:#5a5148;margin:6px 0;line-height:1.6;}
+  .shoot .hk{color:#7a1f1f;font-weight:700;}
+  .scoreline{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:#6f675e;margin-top:6px;}
+  .bar{width:54px;height:6px;border-radius:3px;background:#eee;overflow:hidden;}
+  .bar i{display:block;height:100%;border-radius:3px;background:#a83232;}
+  .num{font-weight:800;color:#3d332b;}
+  .kpi{font-size:12px;color:#33475f;background:#eef4ff;border-radius:6px;padding:2px 9px;display:inline-block;margin-top:4px;}
+  .kpi b{color:#1f4a8a;}
+  .todo{background:#fdf6ec;border:1px solid #ecdfc8;border-radius:10px;padding:11px 15px;font-size:13px;color:#6f5130;margin-top:14px;}
+  .todo b{color:#8a5a1a;}
+  .foot{font-size:11.5px;color:#a29a90;margin-top:20px;padding-top:12px;border-top:1px solid #e5dfd6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="brand">互联网热卖样本 · 服饰赛道（抖音双11开门红女装领跑）</div>
+    <h1>波司登羽绒服（轻薄/鹅绒系列）</h1>
+    <div class="model">S4 内容策略组合报告 · 公开信息 + 抖音内容侧验证 · 2026-10 当季</div>
+    <div class="chips">
+      <span class="chip">鹅绒填充（比鸭绒贵一倍）</span>
+      <span class="chip">内收腰/3D 裁剪显瘦版型</span>
+      <span class="chip">蓄热里布</span>
+      <span class="chip">品牌保障</span>
+    </div>
+  </div>
+
+  <div class="how"><b>内容侧关键情报：</b>素人试穿合集 2.9 万赞（爆款模板）；轻薄款腰带扎起来"摩登感"4089 赞；158 小个子穿 3D 裁剪 114 赞；大码 210 斤博主实测鹅绒（"没买过品牌羽绒服真的可以试一下"）；<b>风险：价位对比内容 2002 赞吐槽"面料硬邦邦、价格贵"——性价比质疑需正面应对。</b></div>
+
+  <div class="sec-title"><span class="st">组合矩阵</span>主攻场景 × 主攻人群 → 命中买点</div>
+  <div class="mat">
+    <table class="mx">
+      <tr><th class="corner">场景 ＼ 人群</th><th>通勤 OL 党</th><th>小个子女生</th><th>大码人群</th></tr>
+      <tr><td class="scene">SC-01 素人试穿合集</td><td class="picked"><span class="cell-top">BP-03 时装百搭 + BP-04 品牌</span><span class="cell-sub">ST-01 · 29 分</span></td><td class="picked"><span class="cell-top">BP-01 显瘦</span><span class="cell-sub">并入 ST-01</span></td><td class="picked"><span class="cell-top">BP-02 鹅绒 + 版型</span><span class="cell-sub">并入 ST-01</span></td></tr>
+      <tr><td class="scene">SC-02 小个子显瘦上身</td><td class="cell-cut">—</td><td class="picked"><span class="cell-top">BP-01 3D 裁剪显瘦</span><span class="cell-sub">ST-02 · 25 分</span></td><td class="cell-cut">—</td></tr>
+      <tr><td class="scene">SC-03 通勤保暖穿搭</td><td class="picked"><span class="cell-top">BP-03 轻薄时装款</span><span class="cell-sub">ST-03 · 22 分</span></td><td class="cell-cut">—</td><td class="cell-cut">—</td></tr>
+      <tr><td class="scene">SC-04 大码友好实测</td><td class="cell-cut">—</td><td class="cell-cut">—</td><td class="picked"><span class="cell-top">BP-02 鹅绒 + BP-04 品牌</span><span class="cell-sub">ST-04 · 20 分</span></td></tr>
+    </table>
+    <div class="legend">高亮 = 进入 Top；素人试穿合集是全人群通吃模板</div>
+  </div>
+
+  <div class="sec-title"><span class="st">Top 4</span>优先测试方向</div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-01 素人试穿合集 · 原相机测评</span><span class="rank r-top">TOP 1</span></div>
+    <div class="combo"><span class="c-p">通勤 OL × 小个子 × 大码</span><span class="c-b">BP-03 时装百搭 + BP-01 显瘦 + BP-04 品牌</span><span class="c-s">SC-01 素人试穿合集</span></div>
+    <div class="rowline"><span class="lb">拍法</span>原相机多件试穿（轻薄款/长款/短款），每件前后转圈 + 拉链/敞开两种状态 + 标注身高体重供对号入座。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"9 件波司登原相机试穿，哪件值得买？"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"9件波司登素人试穿原相机测评"2.9 万赞——品类已验证爆款模板；原生感强、弱广告属性、天然覆盖多人群。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:100%"></i></div><span class="num">10</span></span><span class="score-item">契合 <div class="bar"><i style="width:100%"></i></div><span class="num">10</span></span><span class="score-item">爆款 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">总分 <span class="num">29</span></span></div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 完播率 · 评论区"第几件"互动</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-02 小个子显瘦 · 3D 裁剪上身</span><span class="rank r-top">TOP 2</span></div>
+    <div class="combo"><span class="c-p">小个子女生</span><span class="c-b">BP-01 3D 裁剪显瘦</span><span class="c-s">SC-02 小个子显瘦上身</span></div>
+    <div class="rowline"><span class="lb">拍法</span>158 身高实拍：转一圈展示"龟背 3D 裁剪"背带感；拉链拉起 vs 敞开状态对比；配尖头靴女人味穿搭。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"158 穿它真的显瘦，羽绒服也能有背带感"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>158 身高 3D 裁剪内容 114 赞（量级小但方向被验证）；"羽绒服显瘦"是品类第一认知冲突点（羽绒服=臃肿）——谁解决谁拿流量。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">契合 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">爆款 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">总分 <span class="num">25</span></span></div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 评论区"多高多重"自报 · 主页进店率</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-03 通勤保暖 · 轻薄时装款</span><span class="rank r-test">TOP 3</span></div>
+    <div class="combo"><span class="c-p">通勤 OL 党</span><span class="c-b">BP-03 轻薄时装款</span><span class="c-s">SC-03 通勤保暖穿搭</span></div>
+    <div class="rowline"><span class="lb">拍法</span>轻薄鹅绒款穿搭演示：腰带扎起来配修身牛仔裤/喇叭裤/长裙 + 尖头靴，"摩登感"上身。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"谁说羽绒服不时尚？轻薄鹅绒款通勤直接穿"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>轻薄款腰带扎起来"摩登感"4089 赞；时装化是羽绒服品类增长方向（内收腰、蓄热里布都是支撑点）。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">契合 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">爆款 <div class="bar"><i style="width:60%"></i></div><span class="num">6</span></span><span class="score-item">总分 <span class="num">22</span></span></div>
+    <span class="kpi">测试指标：<b>点赞率 · 收藏率 · 评论区"求链接"</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-04 大码友好 · 210 斤实测</span><span class="rank r-test">TOP 4</span></div>
+    <div class="combo"><span class="c-p">大码人群</span><span class="c-b">BP-02 鹅绒 + BP-04 品牌</span><span class="c-s">SC-04 大码友好实测</span></div>
+    <div class="rowline"><span class="lb">拍法</span>大码博主原相机：侧面/背面多角度 + "鹅绒比鸭绒贵一倍"材质讲解 + 码数建议。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"210 斤穿波司登实测，没买过品牌羽绒服的可以试"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>大码实测方向已存在但量级小（15 赞）——蓝海占位；大码人群忠诚度高、复购强，值得测试。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">契合 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">爆款 <div class="bar"><i style="width:50%"></i></div><span class="num">5</span></span><span class="score-item">总分 <span class="num">20</span></span></div>
+    <span class="kpi">测试指标：<b>完播率 · 评论区尺码咨询 · 转化率</b></span>
+  </div>
+
+  <div class="todo"><b>风险提示：</b>①"面料硬邦邦、价格贵"是 2002 赞价位对比内容的吐槽点——需准备"材质对比（鹅绒 vs 鸭绒、绒子含量）+ 品牌售后"应对话术，不回避价格；②显瘦承诺需克制（"显瘦"是主观感受，别做绝对化宣称）；③鹅绒/绒子含量需以吊牌实测为准，避免功效争议。</div>
+
+  <div class="foot">S4 调试产物 · 互联网热卖样本（2026 双11 开门红服饰赛道）· 卖点来自公开信息 · 内容侧证据检索于 2026-10-28 抖音</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S4 调试 · 爱媛38号果冻橙（互联网热卖）· 内容策略组合报告</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#faf8f5;color:#2b2b2b;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:1100px;margin:0 auto;}
+  .hero{background:linear-gradient(135deg,#c2701a 0%,#e08a2e 55%,#f0a84f 100%);color:#fff;border-radius:16px;padding:26px 30px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06);}
+  .hero .brand{font-size:13px;letter-spacing:2px;opacity:.85;font-weight:600;}
+  .hero h1{font-size:24px;margin:6px 0 2px;font-weight:700;}
+  .hero .model{font-size:14px;opacity:.92;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-size:12.5px;}
+  .chip b{font-weight:700;}
+  .how{margin-top:14px;background:#f4f0ea;border-radius:10px;padding:10px 15px;font-size:12.5px;color:#5a5148;}
+  .how b{color:#3d332b;}
+  .sec-title{font-size:17px;font-weight:700;margin:24px 0 10px;color:#3d332b;}
+  .sec-title .st{font-size:12px;font-weight:600;color:#fff;background:#c2701a;border-radius:6px;padding:2px 8px;margin-right:8px;vertical-align:2px;}
+  .mat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:14px 16px;overflow-x:auto;}
+  table.mx{width:100%;border-collapse:collapse;font-size:12.5px;min-width:680px;}
+  .mx th{background:#fdf3e6;color:#a85d12;font-weight:700;padding:8px 10px;border:1px solid #f3e2c8;text-align:center;}
+  .mx th.corner{text-align:left;}
+  .mx td{border:1px solid #f3e2c8;padding:8px 10px;text-align:center;vertical-align:middle;color:#4a453f;}
+  .mx td.scene{text-align:left;font-weight:700;color:#3d332b;white-space:nowrap;}
+  .cell-top{font-size:12px;font-weight:800;color:#a85d12;display:block;}
+  .cell-sub{font-size:11px;color:#8a8178;display:block;margin-top:2px;}
+  .cell-cut{color:#c9c2b8;}
+  .picked{background:#fef7ec;}
+  .legend{font-size:12px;color:#8a8178;margin-top:8px;}
+  .strat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:15px 18px;margin-bottom:11px;box-shadow:0 2px 8px rgba(90,70,50,.05);}
+  .shead{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .sname{font-size:16px;font-weight:800;color:#3d332b;}
+  .rank{font-size:11.5px;font-weight:800;border-radius:6px;padding:2px 9px;color:#fff;}
+  .r-top{background:#c2701a;} .r-test{background:#e8a04e;}
+  .combo{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 6px;}
+  .combo span{font-size:12px;border-radius:999px;padding:2px 10px;font-weight:600;}
+  .c-p{background:#f6efe8;color:#7a5a3a;}
+  .c-b{background:#e8f0fe;color:#1f4a8a;}
+  .c-s{background:#e3f2e8;color:#1f7a4d;}
+  .rowline{font-size:13px;color:#4a453f;margin:5px 0;line-height:1.6;}
+  .rowline b{color:#3d332b;}
+  .rowline .lb{display:inline-block;min-width:5.6em;color:#8a8178;font-weight:700;font-size:12.5px;}
+  .shoot{font-size:12.5px;background:#f7f3ec;border-radius:8px;padding:7px 11px;color:#5a5148;margin:6px 0;line-height:1.6;}
+  .shoot .hk{color:#a85d12;font-weight:700;}
+  .scoreline{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:#6f675e;margin-top:6px;}
+  .bar{width:54px;height:6px;border-radius:3px;background:#eee;overflow:hidden;}
+  .bar i{display:block;height:100%;border-radius:3px;background:#c2701a;}
+  .num{font-weight:800;color:#3d332b;}
+  .kpi{font-size:12px;color:#33475f;background:#eef4ff;border-radius:6px;padding:2px 9px;display:inline-block;margin-top:4px;}
+  .kpi b{color:#1f4a8a;}
+  .todo{background:#fdf6ec;border:1px solid #ecdfc8;border-radius:10px;padding:11px 15px;font-size:13px;color:#6f5130;margin-top:14px;}
+  .todo b{color:#8a5a1a;}
+  .foot{font-size:11.5px;color:#a29a90;margin-top:20px;padding-top:12px;border-top:1px solid #e5dfd6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="brand">互联网热卖样本 · 生鲜赛道（蝉妈妈七日潜力榜 TOP1 · 10 月当季）</div>
+    <h1>爱媛38号果冻橙（四川眉山）</h1>
+    <div class="model">S4 内容策略组合报告 · 公开信息 + 抖音内容侧验证 · 2026-10 当季</div>
+    <div class="chips">
+      <span class="chip">爆汁（行走的榨汁机）</span>
+      <span class="chip">皮薄无籽可手剥</span>
+      <span class="chip">果肉细嫩如果冻</span>
+      <span class="chip">九甜一酸</span>
+      <span class="chip">现摘现发 · 应季尝鲜</span>
+    </div>
+  </div>
+
+  <div class="how"><b>内容侧关键情报：</b>"爱媛果冻橙上市了，甜蜜爆汁"7396 赞（应季上市爆款）；"九甜一酸一口爆汁"2533 赞；"嫌普通橙子果肉粗、吐籽的可以试试"1476 赞（对比痛点切入）；"可以吸着吃"473 赞（差异化记忆点）。<b>10 月正是应季上市窗口，内容侧需求正在爆发。</b></div>
+
+  <div class="sec-title"><span class="st">组合矩阵</span>主攻场景 × 主攻人群 → 命中买点</div>
+  <div class="mat">
+    <table class="mx">
+      <tr><th class="corner">场景 ＼ 人群</th><th>办公室下午茶党</th><th>宝妈（孩子零食）</th><th>应季尝鲜/送礼党</th></tr>
+      <tr><td class="scene">SC-01 应季上市尝鲜</td><td class="picked"><span class="cell-top">BP-05 现摘现发应季</span><span class="cell-sub">ST-01 · 27 分</span></td><td class="cell-cut">—</td><td class="picked"><span class="cell-top">BP-05 + BP-04 九甜一酸</span><span class="cell-sub">并入 ST-01</span></td></tr>
+      <tr><td class="scene">SC-02 手剥对比普通橙</td><td class="picked"><span class="cell-top">BP-02 皮薄无籽</span><span class="cell-sub">ST-02 · 25 分</span></td><td class="picked"><span class="cell-top">BP-03 无籽细嫩</span><span class="cell-sub">并入 ST-02</span></td><td class="cell-cut">—</td></tr>
+      <tr><td class="scene">SC-03 办公室下午茶爆汁</td><td class="picked"><span class="cell-top">BP-01 爆汁</span><span class="cell-sub">ST-03 · 22 分</span></td><td class="cell-cut">—</td><td class="cell-cut">—</td></tr>
+      <tr><td class="scene">SC-04 孩子爱吃 · 吸着吃</td><td class="cell-cut">—</td><td class="picked"><span class="cell-top">BP-03 细嫩无籽 + 吸着吃</span><span class="cell-sub">ST-04 · 21 分</span></td><td class="cell-cut">—</td></tr>
+    </table>
+    <div class="legend">高亮 = 进入 Top；应季上市是当下最大流量入口</div>
+  </div>
+
+  <div class="sec-title"><span class="st">Top 4</span>优先测试方向</div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-01 应季上市 · 今年第一颗</span><span class="rank r-top">TOP 1</span></div>
+    <div class="combo"><span class="c-p">应季尝鲜党 × 办公室下午茶党</span><span class="c-b">BP-05 现摘现发 + BP-04 九甜一酸</span><span class="c-s">SC-01 应季上市尝鲜</span></div>
+    <div class="rowline"><span class="lb">拍法</span>果园/产地画面 + 手剥爆汁特写 + "今年的第一颗爱媛你吃了吗"；现摘现发链路展示。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"爱媛又到季节了，九甜一酸一口爆汁"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"上市了甜蜜爆汁"7396 赞 + "九甜一酸一口爆汁"2533 赞——应季节点是生鲜最大流量入口，当下正是窗口；产地溯源 + 现摘现发是信任锚点。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:100%"></i></div><span class="num">10</span></span><span class="score-item">契合 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">爆款 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">总分 <span class="num">27</span></span></div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 进房率 · 评论区"怎么买"</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-02 手剥对比 · 告别吐籽</span><span class="rank r-top">TOP 2</span></div>
+    <div class="combo"><span class="c-p">办公室党 × 宝妈</span><span class="c-b">BP-02 皮薄无籽 + BP-03 细嫩</span><span class="c-s">SC-02 手剥对比普通橙</span></div>
+    <div class="rowline"><span class="lb">拍法</span>普通橙 vs 爱媛并排：剥皮厚度对比、果肉颗粒对比、"吐籽 vs 无籽"对比；"果肉细嫩得像果冻"特写。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"嫌橙子果肉粗还要吐籽？试试爱媛果冻橙"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"嫌普通橙子果肉粗、吃起来还要吐籽的可以试试"1476 赞——对比痛点切入已验证；对比型内容天然完播钩子强。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">契合 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">爆款 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">总分 <span class="num">25</span></span></div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 完播率 · 评论区互动</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-03 办公室下午茶 · 行走的榨汁机</span><span class="rank r-test">TOP 3</span></div>
+    <div class="combo"><span class="c-p">办公室下午茶党</span><span class="c-b">BP-01 爆汁</span><span class="c-s">SC-03 办公室下午茶</span></div>
+    <div class="rowline"><span class="lb">拍法</span>工位剥橙：切开汁水爆出慢镜、吸着吃/切着吃两种吃法、分给同事"榨汁机本机"梗。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"行走的榨汁机，办公室下午茶就它了"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"果肉在嘴里跟榨汁机一样"口口爆汁内容验证；办公室场景自带传播（分享/投喂）属性。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">契合 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">爆款 <div class="bar"><i style="width:60%"></i></div><span class="num">6</span></span><span class="score-item">总分 <span class="num">22</span></span></div>
+    <span class="kpi">测试指标：<b>点赞率 · 转发率 · 评论区"求链接"</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-04 孩子爱吃 · 吸着吃</span><span class="rank r-test">TOP 4</span></div>
+    <div class="combo"><span class="c-p">宝妈（孩子零食）</span><span class="c-b">BP-03 细嫩无籽 + 吸着吃</span><span class="c-s">SC-04 孩子爱吃</span></div>
+    <div class="rowline"><span class="lb">拍法</span>孩子用吸管吸橙子汁的画面（"可以吸着吃的橙子"）；无籽细嫩不怕卡喉；妈妈放心给娃当零食。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"可以吸着吃的橙子，孩子超爱"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"可以吸着吃的果冻橙"473 赞——差异化记忆点；无籽+细嫩是宝妈人群决策核心，蓝海方向待放大。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">契合 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">爆款 <div class="bar"><i style="width:60%"></i></div><span class="num">6</span></span><span class="score-item">总分 <span class="num">21</span></span></div>
+    <span class="kpi">测试指标：<b>完播率 · 评论区"孩子多大了"互动 · 转化率</b></span>
+  </div>
+
+  <div class="todo"><b>风险提示：</b>①生鲜品质不稳定是品类通病——"大小不一/不甜/运输损坏"差评风险高，口播需给"个头可能有差异、坏果包赔"预期管理话术；②"九甜一酸"是主观口感，避免绝对化"超甜"宣称；③产地溯源（四川眉山）需与发货地一致，避免虚假宣传。</div>
+
+  <div class="foot">S4 调试产物 · 互联网热卖样本（蝉妈妈七日潜力榜 TOP1 · 2026-10 当季）· 卖点来自公开信息 · 内容侧证据检索于 2026-10-28 抖音</div>
+</div>
+</body>
+</html>

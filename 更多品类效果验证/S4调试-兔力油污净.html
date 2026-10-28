@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S4 调试 · 兔力厨房重油污净 · 内容策略组合报告</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#faf8f5;color:#2b2b2b;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:1100px;margin:0 auto;}
+  .hero{background:linear-gradient(135deg,#2f6b4f 0%,#3f8a64 55%,#56a67e 100%);color:#fff;border-radius:16px;padding:26px 30px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06);}
+  .hero .brand{font-size:13px;letter-spacing:2px;opacity:.85;font-weight:600;}
+  .hero h1{font-size:24px;margin:6px 0 2px;font-weight:700;}
+  .hero .model{font-size:14px;opacity:.92;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-size:12.5px;}
+  .chip b{font-weight:700;}
+  .imgs{display:flex;gap:12px;margin-top:14px;}
+  .imgs img{flex:1;min-width:0;border-radius:10px;max-height:180px;object-fit:cover;display:block;}
+  .warn{margin-top:14px;background:#fdf2f2;border:1px solid #eab7b7;border-radius:10px;padding:10px 15px;font-size:12.5px;color:#a33;line-height:1.6;}
+  .warn b{color:#8a1f1f;}
+  .how{margin-top:14px;background:#f4f0ea;border-radius:10px;padding:10px 15px;font-size:12.5px;color:#5a5148;}
+  .how b{color:#3d332b;}
+  .sec-title{font-size:17px;font-weight:700;margin:24px 0 10px;color:#3d332b;}
+  .sec-title .st{font-size:12px;font-weight:600;color:#fff;background:#3f8a64;border-radius:6px;padding:2px 8px;margin-right:8px;vertical-align:2px;}
+  .mat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:14px 16px;overflow-x:auto;}
+  table.mx{width:100%;border-collapse:collapse;font-size:12.5px;min-width:680px;}
+  .mx th{background:#eef7f2;color:#2f6b4f;font-weight:700;padding:8px 10px;border:1px solid #dcebe3;text-align:center;}
+  .mx th.corner{text-align:left;}
+  .mx td{border:1px solid #dcebe3;padding:8px 10px;text-align:center;vertical-align:middle;color:#4a453f;}
+  .mx td.scene{text-align:left;font-weight:700;color:#3d332b;white-space:nowrap;}
+  .cell-top{font-size:12px;font-weight:800;color:#2f6b4f;display:block;}
+  .cell-sub{font-size:11px;color:#8a8178;display:block;margin-top:2px;}
+  .cell-cut{color:#c9c2b8;}
+  .picked{background:#f0faf5;}
+  .legend{font-size:12px;color:#8a8178;margin-top:8px;}
+  .strat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:15px 18px;margin-bottom:11px;box-shadow:0 2px 8px rgba(90,70,50,.05);}
+  .shead{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .sname{font-size:16px;font-weight:800;color:#3d332b;}
+  .rank{font-size:11.5px;font-weight:800;border-radius:6px;padding:2px 9px;color:#fff;}
+  .r-top{background:#2f6b4f;} .r-test{background:#56a67e;}
+  .combo{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 6px;}
+  .combo span{font-size:12px;border-radius:999px;padding:2px 10px;font-weight:600;}
+  .c-p{background:#f6efe8;color:#7a5a3a;}
+  .c-b{background:#e8f0fe;color:#1f4a8a;}
+  .c-s{background:#e3f2e8;color:#1f7a4d;}
+  .rowline{font-size:13px;color:#4a453f;margin:5px 0;line-height:1.6;}
+  .rowline b{color:#3d332b;}
+  .rowline .lb{display:inline-block;min-width:5.6em;color:#8a8178;font-weight:700;font-size:12.5px;}
+  .shoot{font-size:12.5px;background:#f7f3ec;border-radius:8px;padding:7px 11px;color:#5a5148;margin:6px 0;line-height:1.6;}
+  .shoot .hk{color:#2f6b4f;font-weight:700;}
+  .scoreline{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:#6f675e;margin-top:6px;}
+  .bar{width:54px;height:6px;border-radius:3px;background:#eee;overflow:hidden;}
+  .bar i{display:block;height:100%;border-radius:3px;background:#2f6b4f;}
+  .num{font-weight:800;color:#3d332b;}
+  .kpi{font-size:12px;color:#33475f;background:#eef4ff;border-radius:6px;padding:2px 9px;display:inline-block;margin-top:4px;}
+  .kpi b{color:#1f4a8a;}
+  .todo{background:#fdf6ec;border:1px solid #ecdfc8;border-radius:10px;padding:11px 15px;font-size:13px;color:#6f5130;margin-top:14px;}
+  .todo b{color:#8a5a1a;}
+  .foot{font-size:11.5px;color:#a29a90;margin-top:20px;padding-top:12px;border-top:1px solid #e5dfd6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="brand">兔の力 Rabito · 官方旗舰店</div>
+    <h1>厨房重油污净（500g 喷雾）</h1>
+    <div class="model">S4 内容策略组合报告 · 输入 = S1 买点 × S2 人群 × S3 场景（调试版）</div>
+    <div class="chips">
+      <span class="chip">渗透洁净 · 快速去重油</span>
+      <span class="chip">除菌 99.9%*</span>
+      <span class="chip">柠檬清香不刺鼻</span>
+      <span class="chip">灶台 / 水槽 / 油烟机</span>
+      <span class="chip">500g 大容量</span>
+    </div>
+    <div class="imgs">
+      <img src="/Users/zhentao/Doubao/chats/2026-10-28/new-chat-6/tuli-oil1.jpg" alt="兔力油污净产品图1">
+      <img src="/Users/zhentao/Doubao/chats/2026-10-28/new-chat-6/tuli-oil2.jpg" alt="兔力油污净产品图2">
+    </div>
+  </div>
+
+  <div class="warn"><b>品类风险（内容侧核验）：</b>油污净品类存在信任危机——"碳化老油擦不掉"打假测评 1.6k 赞；同时多条实证验证"轻油污效果好、不刺鼻"。策略：<b>先实证再承诺，三段实测是标配形式</b>。</div>
+
+  <div class="how"><b>原料来源：</b>S3 调试产物（new-chat-6）· 本品自带除菌 99.9%* 与渗透洁净参数，需核对检验报告后用于信任层 · 买点 Tier/人群打分按调试口径补齐。</div>
+
+  <div class="sec-title"><span class="st">组合矩阵</span>主攻场景 × 主攻人群 → 命中买点</div>
+  <div class="mat">
+    <table class="mx">
+      <tr><th class="corner">场景 ＼ 人群</th><th>家庭主厨（常做饭）</th><th>租房退租党</th></tr>
+      <tr><td class="scene">SC-01 油烟机灶台三段实测</td><td class="picked"><span class="cell-top">BP-01 渗透去油实测</span><span class="cell-sub">ST-01 · 26 分</span></td><td class="cell-cut">—</td></tr>
+      <tr><td class="scene">SC-02 租房退租押金保卫战</td><td class="cell-cut">—</td><td class="picked"><span class="cell-top">BP-01 去油 + BP-03 大容量</span><span class="cell-sub">ST-02 · 25 分</span></td></tr>
+      <tr><td class="scene">SC-03 刺鼻对比清香实测</td><td class="picked"><span class="cell-top">BP-02 清香不刺鼻</span><span class="cell-sub">ST-03 · 22 分</span></td><td class="picked"><span class="cell-top">BP-02</span><span class="cell-sub">并入 ST-03</span></td></tr>
+      <tr><td class="scene">SC-04 年末大扫除一瓶管全屋</td><td class="picked"><span class="cell-top">BP-03 大容量</span><span class="cell-sub">ST-04 · 19 分</span></td><td class="cell-cut">—</td></tr>
+    </table>
+    <div class="legend">高亮 = 进入 Top；家庭主厨是基本盘，退租党是增量叙事</div>
+  </div>
+
+  <div class="sec-title"><span class="st">Top 4</span>优先测试方向</div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-01 油烟机灶台 · 三段实测</span><span class="rank r-top">TOP 1</span></div>
+    <div class="combo"><span class="c-p">家庭主厨（常做饭）</span><span class="c-b">BP-01 渗透去油实测</span><span class="c-s">SC-01 油烟机灶台三段实测</span></div>
+    <div class="rowline"><span class="lb">拍法</span>灶台/油烟机积油特写 → 喷泡沫覆盖 → 静置 5 分钟计时 → 抹布一擦透亮，同机位前后对比。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"说能擦掉老油污的油污净，我实测给你看"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>打假测评 1.6k 赞反衬实证价值——"先实证再承诺"是品类信任战标配；统一条件三段式实测可直接对位竞品打假内容。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:100%"></i></div><span class="num">10</span></span><span class="score-item">契合 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">爆款 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">总分 <span class="num">26</span></span></div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 完播率 · 评论区"求链接"</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-02 租房退租 · 押金保卫战</span><span class="rank r-top">TOP 2</span></div>
+    <div class="combo"><span class="c-p">租房退租党</span><span class="c-b">BP-01 去油 + BP-03 大容量</span><span class="c-s">SC-02 租房退租</span></div>
+    <div class="rowline"><span class="lb">拍法</span>出租屋厨房（油垢重）→ 喷、等、擦 → 房东视频验收"可以，押金退你"；结尾亮出省下的保洁费。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"退租前用它，押金一分不少拿回来"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>退租清洁是抖音常青叙事（"押金"自带强共情 + 省钱钩子）；品类实测可支撑"老油也能擦"。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">契合 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">爆款 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">总分 <span class="num">25</span></span></div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 评论区互动 · 收藏率（攻略属性）</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-03 刺鼻对比 · 清香实测</span><span class="rank r-test">TOP 3</span></div>
+    <div class="combo"><span class="c-p">家庭主厨 × 租房党</span><span class="c-b">BP-02 清香不刺鼻</span><span class="c-s">SC-03 刺鼻对比</span></div>
+    <div class="rowline"><span class="lb">拍法</span>两瓶清洁剂并排喷（一瓶呛鼻捂鼻，一瓶柠檬香），主角不戴口罩完成全厨房清洁。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"清洁剂不用捂着鼻子用，柠檬香还去油"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"不呛人全程不用戴口罩"是用户验证点；刺鼻是品类高频差评——差异化卖点，但单卖点偏窄。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">契合 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">爆款 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">总分 <span class="num">22</span></span></div>
+    <span class="kpi">测试指标：<b>点赞率 · 评论区"会不会呛"提问转化</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-04 年末大扫除 · 一瓶管全屋</span><span class="rank r-test">TOP 4</span></div>
+    <div class="combo"><span class="c-p">家庭主厨</span><span class="c-b">BP-03 大容量</span><span class="c-s">SC-04 年末大扫除</span></div>
+    <div class="rowline"><span class="lb">拍法</span>灶台→水槽→台面→电器快切，一瓶在手逐场景擦亮，结尾全家福。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"年末大扫除，一瓶管整个厨房"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>大扫除内容季节性爆发；适合 11-12 月节点投放，当前为储备方向。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">契合 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">爆款 <div class="bar"><i style="width:50%"></i></div><span class="num">5</span></span><span class="score-item">总分 <span class="num">19</span></span></div>
+    <span class="kpi">测试指标：<b>完播率 · 收藏率 · 季节性流量峰值</b></span>
+  </div>
+
+  <div class="todo"><b>风险提示：</b>①"除菌 99.9%*"必须核对检测报告再用于口播（平台功效宣称红线）；②三段实测的统一条件（油污年限、用量、静置时间）必须一致，否则会被打假内容反向引用；③避免"全能"承诺——只讲厨房油污场景，不讲全屋。</div>
+
+  <div class="foot">S4 调试产物 · 原料 = S3 调试场景卡（new-chat-6/S3调试-兔力油污净.html）· 内容侧证据检索于 2026-10-28</div>
+</div>
+</body>
+</html>

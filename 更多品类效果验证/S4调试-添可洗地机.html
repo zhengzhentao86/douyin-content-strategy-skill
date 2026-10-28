@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S4 调试 · 添可芙万洗地机（互联网热卖）· 内容策略组合报告</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#faf8f5;color:#2b2b2b;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:1100px;margin:0 auto;}
+  .hero{background:linear-gradient(135deg,#1f3a5e 0%,#2f5b8c 55%,#4a82b5 100%);color:#fff;border-radius:16px;padding:26px 30px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06);}
+  .hero .brand{font-size:13px;letter-spacing:2px;opacity:.85;font-weight:600;}
+  .hero h1{font-size:24px;margin:6px 0 2px;font-weight:700;}
+  .hero .model{font-size:14px;opacity:.92;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-size:12.5px;}
+  .chip b{font-weight:700;}
+  .warn{margin-top:14px;background:#fdf2f2;border:1px solid #eab7b7;border-radius:10px;padding:10px 15px;font-size:12.5px;color:#a33;line-height:1.6;}
+  .warn b{color:#8a1f1f;}
+  .how{margin-top:14px;background:#f4f0ea;border-radius:10px;padding:10px 15px;font-size:12.5px;color:#5a5148;}
+  .how b{color:#3d332b;}
+  .sec-title{font-size:17px;font-weight:700;margin:24px 0 10px;color:#3d332b;}
+  .sec-title .st{font-size:12px;font-weight:600;color:#fff;background:#2f5b8c;border-radius:6px;padding:2px 8px;margin-right:8px;vertical-align:2px;}
+  .mat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:14px 16px;overflow-x:auto;}
+  table.mx{width:100%;border-collapse:collapse;font-size:12.5px;min-width:680px;}
+  .mx th{background:#eef3fa;color:#1f3a5e;font-weight:700;padding:8px 10px;border:1px solid #dde6f0;text-align:center;}
+  .mx th.corner{text-align:left;}
+  .mx td{border:1px solid #dde6f0;padding:8px 10px;text-align:center;vertical-align:middle;color:#4a453f;}
+  .mx td.scene{text-align:left;font-weight:700;color:#3d332b;white-space:nowrap;}
+  .cell-top{font-size:12px;font-weight:800;color:#1f3a5e;display:block;}
+  .cell-sub{font-size:11px;color:#8a8178;display:block;margin-top:2px;}
+  .cell-cut{color:#c9c2b8;}
+  .picked{background:#f1f6fc;}
+  .legend{font-size:12px;color:#8a8178;margin-top:8px;}
+  .strat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:15px 18px;margin-bottom:11px;box-shadow:0 2px 8px rgba(90,70,50,.05);}
+  .shead{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .sname{font-size:16px;font-weight:800;color:#3d332b;}
+  .rank{font-size:11.5px;font-weight:800;border-radius:6px;padding:2px 9px;color:#fff;}
+  .r-top{background:#1f3a5e;} .r-test{background:#4a82b5;}
+  .combo{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 6px;}
+  .combo span{font-size:12px;border-radius:999px;padding:2px 10px;font-weight:600;}
+  .c-p{background:#f6efe8;color:#7a5a3a;}
+  .c-b{background:#e8f0fe;color:#1f4a8a;}
+  .c-s{background:#e3f2e8;color:#1f7a4d;}
+  .rowline{font-size:13px;color:#4a453f;margin:5px 0;line-height:1.6;}
+  .rowline b{color:#3d332b;}
+  .rowline .lb{display:inline-block;min-width:5.6em;color:#8a8178;font-weight:700;font-size:12.5px;}
+  .shoot{font-size:12.5px;background:#f7f3ec;border-radius:8px;padding:7px 11px;color:#5a5148;margin:6px 0;line-height:1.6;}
+  .shoot .hk{color:#1f3a5e;font-weight:700;}
+  .scoreline{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:#6f675e;margin-top:6px;}
+  .bar{width:54px;height:6px;border-radius:3px;background:#eee;overflow:hidden;}
+  .bar i{display:block;height:100%;border-radius:3px;background:#1f3a5e;}
+  .num{font-weight:800;color:#3d332b;}
+  .kpi{font-size:12px;color:#33475f;background:#eef4ff;border-radius:6px;padding:2px 9px;display:inline-block;margin-top:4px;}
+  .kpi b{color:#1f4a8a;}
+  .todo{background:#fdf6ec;border:1px solid #ecdfc8;border-radius:10px;padding:11px 15px;font-size:13px;color:#6f5130;margin-top:14px;}
+  .todo b{color:#8a5a1a;}
+  .foot{font-size:11.5px;color:#a29a90;margin-top:20px;padding-top:12px;border-top:1px solid #e5dfd6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="brand">互联网热卖样本 · 小家电赛道（抖音双11开门红 TOP3）</div>
+    <h1>添可芙万洗地机（极客 3.0 / StretchPlus 系列）</h1>
+    <div class="model">S4 内容策略组合报告 · 公开信息 + 抖音内容侧验证 · 2026-10</div>
+    <div class="chips">
+      <span class="chip">吸拖一体</span>
+      <span class="chip">一键自清洁 + 热风烘干</span>
+      <span class="chip">辅助轮省力不废腰</span>
+      <span class="chip">100 平续航还有一半电</span>
+      <span class="chip">清水箱下置 · 握持 500ml 手感</span>
+    </div>
+  </div>
+
+  <div class="warn"><b>内容侧关键风险：</b>洗地机品类话语权被测评博主占据，负面密集——"机器重、推拉要自己使劲"488 赞测评、"清洁力一般"56 赞吐槽、"价格贵"上下水对比 351 赞。<b>策略必须：真实用户自用视角（不硬广）+ 先证刚需场景（有娃/宠物）+ 正面回应"重"（下置水箱设计）。</b></div>
+
+  <div class="how"><b>内容侧正面证据：</b>"拖得比自己干净 + 辅助轮自己跑不用弯腰 + 滚刷自清洁"204 赞；"吸力超强、100 平一半电、地砖无痕控水、一键自清洁+热风烘干、省力不废腰"157 赞（自用一周）；保姆级讲解 563 赞（净重 4.9kg、下置水箱）。</div>
+
+  <div class="sec-title"><span class="st">组合矩阵</span>主攻场景 × 主攻人群 → 命中买点</div>
+  <div class="mat">
+    <table class="mx">
+      <tr><th class="corner">场景 ＼ 人群</th><th>有娃/宠物家庭</th><th>懒人家务党</th><th>装修开荒党</th></tr>
+      <tr><td class="scene">SC-01 有娃家庭日常</td><td class="picked"><span class="cell-top">BP-01 吸拖一体</span><span class="cell-sub">ST-01 · 27 分</span></td><td class="cell-cut">—</td><td class="cell-cut">—</td></tr>
+      <tr><td class="scene">SC-02 宠物毛发专场</td><td class="picked"><span class="cell-top">BP-01 + BP-05 吸力</span><span class="cell-sub">ST-02 · 24 分</span></td><td class="cell-cut">—</td><td class="cell-cut">—</td></tr>
+      <tr><td class="scene">SC-03 懒人自清洁展示</td><td class="cell-cut">—</td><td class="picked"><span class="cell-top">BP-02 自清洁烘干</span><span class="cell-sub">ST-03 · 24 分</span></td><td class="cell-cut">—</td></tr>
+      <tr><td class="scene">SC-04 全屋续航实测</td><td class="cell-cut">—</td><td class="picked"><span class="cell-top">BP-04 超长续航</span><span class="cell-sub">ST-04 · 21 分</span></td><td class="cell-cut">—</td></tr>
+      <tr><td class="scene">SC-05 开荒保洁</td><td class="cell-cut">—</td><td class="cell-cut">—</td><td class="picked"><span class="cell-top">BP-01 强清洁</span><span class="cell-sub">ST-05 · 19 分</span></td></tr>
+    </table>
+    <div class="legend">高亮 = 进入 Top；有娃/宠物家庭是刚需最强人群</div>
+  </div>
+
+  <div class="sec-title"><span class="st">Top 5</span>优先测试方向</div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-01 有娃家庭 · 一拖一吸</span><span class="rank r-top">TOP 1</span></div>
+    <div class="combo"><span class="c-p">有娃/宠物家庭</span><span class="c-b">BP-01 吸拖一体</span><span class="c-s">SC-01 有娃家庭日常</span></div>
+    <div class="rowline"><span class="lb">拍法</span>真实家庭视角：宝宝餐椅下食物残渣、奶渍一地 → 洗地机一拖一吸过一遍干净；"比我自己拖得干净"用户原话。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"有娃以后才知道，拖地这件事真的能解放"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"拖地比我自己拖得干净 + 辅助轮自己跑 + 滚刷自清洁"204 赞——真实用户视角被验证；有娃家庭是地面清洁刚需最强人群，天然高频。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:100%"></i></div><span class="num">10</span></span><span class="score-item">契合 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">爆款 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">总分 <span class="num">27</span></span></div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 评论区"家里有娃"自报 · 进店率</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-02 宠物毛发 · 一次吸净</span><span class="rank r-top">TOP 2</span></div>
+    <div class="combo"><span class="c-p">有娃/宠物家庭</span><span class="c-b">BP-01 吸拖一体 + BP-05 吸力</span><span class="c-s">SC-02 宠物毛发专场</span></div>
+    <div class="rowline"><span class="lb">拍法</span>猫狗掉毛季节：地上毛发团特写 → 洗地机吸净 + 滚刷清理对比（毛发不缠滚刷）。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"养宠家庭的命，是洗地机给的"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"大面积的积水、头发都能轻松吸进去"已验证吸力；宠物毛发是抖音养宠内容高频场景，自带情绪共鸣。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">契合 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">爆款 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">总分 <span class="num">24</span></span></div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 点赞率 · 评论区"养宠"互动</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-03 懒人自清洁 · 不用手洗滚刷</span><span class="rank r-top">TOP 3</span></div>
+    <div class="combo"><span class="c-p">懒人家务党</span><span class="c-b">BP-02 一键自清洁 + 热风烘干</span><span class="c-s">SC-03 懒人自清洁展示</span></div>
+    <div class="rowline"><span class="lb">拍法</span>拖完地放回底座 → 一键自清洁 → 滚刷拆出展示"干净如新" → 热风烘干无异味；对比老式拖把手洗滚刷。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"拖完地不用手洗滚刷，这才是真解放"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"一键自清洁+热风烘干，滚刷洗完挺干净、无异味"157 赞自用验证；自清洁是洗地机 vs 传统拖把最大差异化，演示性强。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">契合 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span><span class="score-item">爆款 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">总分 <span class="num">24</span></span></div>
+    <span class="kpi">测试指标：<b>完播率 · 收藏率 · 评论区"手洗滚刷"共鸣</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-04 全屋续航 · 100 平实测</span><span class="rank r-test">TOP 4</span></div>
+    <div class="combo"><span class="c-p">懒人家务党</span><span class="c-b">BP-04 超长续航</span><span class="c-s">SC-04 全屋续航实测</span></div>
+    <div class="rowline"><span class="lb">拍法</span>一镜到底拖全屋 100 平，中途不充电；结尾电量显示"还有一半"；地砖无痕控水特写。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"100 平拖完全屋还有一半电，电量焦虑再见"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"100 多平智能模式拖全屋电量还有一半，续航很顶"157 赞验证；续航是洗地机第二决策点（第一是清洁力）。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span><span class="score-item">契合 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">爆款 <div class="bar"><i style="width:60%"></i></div><span class="num">6</span></span><span class="score-item">总分 <span class="num">21</span></span></div>
+    <span class="kpi">测试指标：<b>完播率 · 收藏率 · 评论区续航咨询</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-05 开荒保洁 · 强清洁力</span><span class="rank r-test">TOP 5</span></div>
+    <div class="combo"><span class="c-p">装修开荒党</span><span class="c-b">BP-01 强清洁</span><span class="c-s">SC-05 开荒保洁</span></div>
+    <div class="rowline"><span class="lb">拍法</span>装修后粉尘/胶渍地面实测 + 重油污拖地（"重油污拖得蛮干净"用户验证）；污水桶展示。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"开荒保洁一台洗地机搞定，重油污也扛得住"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"重油污都拖得蛮干净"是用户对添可历史机型的评价——但注意"极客 3.0 清洁力一般"吐槽并存，开荒场景需同机位实证；开荒是低频但高客单场景。</div>
+    <div class="scoreline"><span class="score-item">人群 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">契合 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span><span class="score-item">爆款 <div class="bar"><i style="width:50%"></i></div><span class="num">5</span></span><span class="score-item">总分 <span class="num">19</span></span></div>
+    <span class="kpi">测试指标：<b>完播率 · 评论区场景咨询</b></span>
+  </div>
+
+  <div class="todo"><b>风险提示：</b>①测评博主负面（重/助力差/清洁力一般）是最大舆论风险——建议"净重 4.9kg + 清水箱下置 + 握持 500ml 手感"作为"重"的正面回应话术（563 赞保姆级讲解已给出现成解法）；②避免"全能"承诺，弱项场景（极致重油污）不做绝对化宣称；③洗地机单价高（2000+），内容需强化"省下保洁费/解放双手"的价值换算。</div>
+
+  <div class="foot">S4 调试产物 · 互联网热卖样本（2026 双11 开门红小家电 TOP3）· 卖点来自公开信息 · 内容侧证据检索于 2026-10-28 抖音</div>
+</div>
+</body>
+</html>

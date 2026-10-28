@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAMEL 骆驼女鞋「开心柠萌」· S4 内容策略组合报告</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#faf8f5;color:#2b2b2b;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:1100px;margin:0 auto;}
+  .hero{background:linear-gradient(135deg,#4a3f35 0%,#6b5b4d 55%,#8a7a68 100%);color:#fff;border-radius:16px;padding:28px 30px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06);}
+  .hero .brand{font-size:13px;letter-spacing:2px;opacity:.85;font-weight:600;}
+  .hero h1{font-size:25px;margin:6px 0 2px;font-weight:700;}
+  .hero .model{font-size:14.5px;opacity:.92;}
+  .hero .pipeline{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;font-size:12px;}
+  .pipe{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px 11px;}
+  .pipe b{color:#ffd98a;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-size:12.5px;}
+  .chip b{font-weight:700;}
+  .imgs{display:flex;gap:12px;margin-top:16px;}
+  .imgs img{flex:1;min-width:0;border-radius:10px;max-height:190px;object-fit:cover;display:block;}
+  .how{margin-top:16px;background:#f4f0ea;border-radius:10px;padding:11px 15px;font-size:13px;color:#5a5148;}
+  .how b{color:#3d332b;}
+  .sec-title{font-size:17px;font-weight:700;margin:26px 0 10px;color:#3d332b;}
+  .sec-title .st{font-size:12px;font-weight:600;color:#fff;background:#8a7a68;border-radius:6px;padding:2px 8px;margin-right:8px;vertical-align:2px;}
+  .matrix{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:16px 18px;overflow-x:auto;}
+  table.mx{width:100%;border-collapse:collapse;font-size:12.5px;min-width:720px;}
+  .mx th{background:#f4f0ea;color:#3d332b;font-weight:700;padding:8px 10px;border:1px solid #e5dfd6;text-align:center;}
+  .mx th.corner{text-align:left;}
+  .mx td{border:1px solid #e5dfd6;padding:9px 10px;text-align:center;vertical-align:middle;color:#4a453f;}
+  .mx td.scene{text-align:left;font-weight:700;color:#3d332b;white-space:nowrap;}
+  .cell-top{font-size:12px;font-weight:800;color:#c25e3c;display:block;}
+  .cell-sub{font-size:11px;color:#8a8178;display:block;margin-top:2px;}
+  .cell-cut{color:#c9c2b8;}
+  .picked{background:#fdf6ec;}
+  .legend{font-size:12px;color:#8a8178;margin-top:8px;}
+  .legend i{display:inline-block;width:12px;height:12px;background:#fdf6ec;border:1px solid #e5dfd6;border-radius:3px;vertical-align:-2px;margin:0 4px 0 10px;}
+  .strat{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:16px 18px;margin-bottom:12px;box-shadow:0 2px 8px rgba(90,70,50,.05);}
+  .shead{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .sname{font-size:16px;font-weight:800;color:#3d332b;}
+  .rank{font-size:11.5px;font-weight:800;border-radius:6px;padding:2px 9px;color:#fff;}
+  .r-top{background:#c25e3c;} .r-test{background:#2f6bd6;} .r-pend{background:#8a7a68;}
+  .combo{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 6px;}
+  .combo span{font-size:12px;border-radius:999px;padding:2px 10px;font-weight:600;}
+  .c-p{background:#f6efe8;color:#7a5a3a;}
+  .c-b{background:#e8f0fe;color:#1f4a8a;}
+  .c-s{background:#e3f2e8;color:#1f7a4d;}
+  .rowline{font-size:13px;color:#4a453f;margin:5px 0;line-height:1.6;}
+  .rowline b{color:#3d332b;}
+  .rowline .lb{display:inline-block;min-width:5.6em;color:#8a8178;font-weight:700;font-size:12.5px;}
+  .shoot{font-size:12.5px;background:#f7f3ec;border-radius:8px;padding:7px 11px;color:#5a5148;margin:6px 0;line-height:1.6;}
+  .shoot .hk{color:#c25e3c;font-weight:700;}
+  .scoreline{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:#6f675e;margin-top:6px;}
+  .score-item{display:flex;align-items:center;gap:5px;}
+  .bar{width:54px;height:6px;border-radius:3px;background:#eee;overflow:hidden;}
+  .bar i{display:block;height:100%;border-radius:3px;background:#c25e3c;}
+  .num{font-weight:800;color:#3d332b;}
+  .kpi{font-size:12px;color:#33475f;background:#eef4ff;border-radius:6px;padding:2px 9px;display:inline-block;margin-top:4px;}
+  .kpi b{color:#1f4a8a;}
+  .plan{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:16px 18px;}
+  .plan table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .plan th{background:#f4f0ea;color:#3d332b;font-weight:700;text-align:left;padding:7px 10px;border:1px solid #e5dfd6;}
+  .plan td{padding:7px 10px;border:1px solid #e5dfd6;color:#4a453f;}
+  .plan td b{color:#3d332b;}
+  .todo{background:#fdf6ec;border:1px solid #ecdfc8;border-radius:10px;padding:12px 16px;font-size:13px;color:#6f5130;margin-top:14px;}
+  .todo b{color:#8a5a1a;}
+  .foot{font-size:11.5px;color:#a29a90;margin-top:22px;padding-top:12px;border-top:1px solid #e5dfd6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="brand">CAMEL 骆驼 · 抖音旗舰店</div>
+    <h1>开心柠萌 · 厚底丑萌鞋（老爹鞋）</h1>
+    <div class="model">S4 内容策略组合报告 · 输入 = S1 买点库 × S2 人群 × S3 场景</div>
+    <div class="pipeline">
+      <span class="pipe"><b>S1</b> 买点库 10 条</span>
+      <span class="pipe"><b>S2</b> 人群 4 张</span>
+      <span class="pipe"><b>S3</b> 场景 8 张</span>
+      <span class="pipe"><b>S4</b> → Top 8 测试方向</span>
+    </div>
+    <div class="chips">
+      <span class="chip">专享价 <b>¥228</b></span>
+      <span class="chip"><b>4千+</b> 加购</span>
+      <span class="chip">好评率 <b>95.8%</b></span>
+    </div>
+    <div class="imgs">
+      <img src="./camel-main.jpg" alt="骆驼开心柠萌主图">
+      <img src="./camel-height.jpg" alt="增高5CM腿部对比">
+    </div>
+  </div>
+
+  <div class="how"><b>S4 是组合器，不是生成器：</b>不发明新内容，只做「人群 × 买点 × 场景」的笛卡尔组合 → 剪枝 → 打分排序 → 输出优先测试方向。质量完全取决于 S1-S3 的原料质量——本页所有分数都来自前三步已验证的数据，不新增拍脑袋结论。</div>
+
+  <!-- 组合矩阵 -->
+  <div class="sec-title"><span class="st">组合矩阵</span>主攻人群 × 主攻场景 → 命中的买点（剪枝后）</div>
+  <div class="matrix">
+    <table class="mx">
+      <tr>
+        <th class="corner">场景 ＼ 人群</th>
+        <th>① 小个子显高党</th>
+        <th>② 穿搭出片党</th>
+        <th>③ 久站脚感党</th>
+      </tr>
+      <tr>
+        <td class="scene">SC-01 面试变装</td>
+        <td class="picked"><span class="cell-top">BP-01 显高 + BP-03 软弹</span><span class="cell-sub">ST-01 · 总分 27</span></td>
+        <td class="cell-cut">—（穿搭党少面试诉求）</td>
+        <td class="cell-cut">—</td>
+      </tr>
+      <tr>
+        <td class="scene">SC-02 聚会合照</td>
+        <td class="picked"><span class="cell-top">BP-01 显高</span><span class="cell-sub">ST-03 · 总分 26</span></td>
+        <td class="cell-cut">—</td>
+        <td class="cell-cut">—</td>
+      </tr>
+      <tr>
+        <td class="scene">SC-03 开学一周穿搭</td>
+        <td class="cell-cut">—</td>
+        <td class="picked"><span class="cell-top">BP-05 配色</span><span class="cell-sub">ST-02 · 总分 28</span></td>
+        <td class="cell-cut">—</td>
+      </tr>
+      <tr>
+        <td class="scene">SC-04 周末探店</td>
+        <td class="cell-cut">—</td>
+        <td class="picked"><span class="cell-top">BP-05 配色 + BP-06 联名</span><span class="cell-sub">ST-05 · 总分 23</span></td>
+        <td class="cell-cut">—</td>
+      </tr>
+      <tr>
+        <td class="scene">SC-05 旅游暴走</td>
+        <td class="picked"><span class="cell-top">BP-03 软弹</span><span class="cell-sub">ST-04 · 总分 24</span></td>
+        <td class="cell-cut">—</td>
+        <td class="picked"><span class="cell-top">BP-03 软弹 + BP-09 多场景</span><span class="cell-sub">并入 ST-04</span></td>
+      </tr>
+    </table>
+    <div class="legend"><i></i>高亮 = 进入 Top 的测试方向（其余组合剪枝：人群与场景无自然关联）</div>
+  </div>
+
+  <!-- Top N -->
+  <div class="sec-title"><span class="st">Top 8</span>优先测试方向（按总分排序）</div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-02 开学一周穿搭 · 同学种草</span><span class="rank r-top">TOP 1</span></div>
+    <div class="combo"><span class="c-p">穿搭出片党</span><span class="c-b">BP-05 多巴胺配色</span><span class="c-s">SC-03 开学/宿舍一周穿搭</span></div>
+    <div class="rowline"><span class="lb">拍法</span>宿舍镜子前一周七天换装（变装卡点）+ 5 色鞋依次出镜 + 色卡陈列收尾；结尾抛钩子"同学问我鞋哪买的"。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"开学第一双鞋，一周穿搭不重样"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>"同学穿的是什么鞋"9 万赞种草爆款 + 变装 17.5 万赞模板，双爆款叠加；多巴胺穿搭话题 4.9 万赞验证需求。</div>
+    <div class="scoreline">
+      <span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span>
+      <span class="score-item">契合 <div class="bar"><i style="width:100%"></i></div><span class="num">10</span></span>
+      <span class="score-item">爆款 <div class="bar"><i style="width:100%"></i></div><span class="num">10</span></span>
+      <span class="score-item">总分 <span class="num">28</span></span>
+    </div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 点赞率 · 评论区"求链接"</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-01 面试变装 · 日常隐形增高</span><span class="rank r-top">TOP 2</span></div>
+    <div class="combo"><span class="c-p">小个子显高党</span><span class="c-b">BP-01 增高显高 + BP-03 软弹</span><span class="c-s">SC-01 面试/入职变装</span></div>
+    <div class="rowline"><span class="lb">拍法</span>变装卡点：先穿 7cm 恨天高配正装扶墙皱眉 → 换丑萌鞋同套正装站直显长；站姿/步伐对比。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"面试别穿恨天高，显高又不累才是赢家"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>面试变装 4.9k 赞现成模板；小个子 × 正装 × 显高三合一真实需求（158 小个子正装 327 赞）；"5cm 日常款"差异化打"10cm 夸张款"。</div>
+    <div class="scoreline">
+      <span class="score-item">人群 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span>
+      <span class="score-item">契合 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span>
+      <span class="score-item">爆款 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span>
+      <span class="score-item">总分 <span class="num">27</span></span>
+    </div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 进房率 · "显高"相关评论占比</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-03 聚会合照 · C 位之争</span><span class="rank r-top">TOP 3</span></div>
+    <div class="combo"><span class="c-p">小个子显高党</span><span class="c-b">BP-01 增高显高</span><span class="c-s">SC-02 聚会合照 C 位</span></div>
+    <div class="rowline"><span class="lb">拍法</span>合照现场快切 + 同机位光脚/穿鞋腿长对比；"被安排站后排踮脚"的共情开场。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"合照永远站后排？不是你的问题，是鞋的问题"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>矮子乐合集 6.6k 赞 + 增高合集 8.5k 赞，"显腿长"是品类第一高频诉求；场景共情强、评论区易自报身高。</div>
+    <div class="scoreline">
+      <span class="score-item">人群 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span>
+      <span class="score-item">契合 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></span>
+      <span class="score-item">爆款 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span>
+      <span class="score-item">总分 <span class="num">26</span></span>
+    </div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 评论区互动 · 主页进店率</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-04 旅游暴走 · 日行万步</span><span class="rank r-top">TOP 4</span></div>
+    <div class="combo"><span class="c-p">小个子 + 久站脚感党</span><span class="c-b">BP-03 软弹 + BP-09 多场景</span><span class="c-s">SC-05 旅游暴走</span></div>
+    <div class="rowline"><span class="lb">拍法</span>景区暴走跟拍 + 同行穿皮鞋揉脚踝对比 + 亮手机步数 2 万+ 收尾。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"日行万步不累脚，旅游暴走就穿它"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>旅游暴走鞋 1.8k 赞 + 徒步 4 万步 4.2k 赞；"鞋不舒服毁一天心情"是真实痛点原话；软弹数据（13.3%/39.9%）可实证。</div>
+    <div class="scoreline">
+      <span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span>
+      <span class="score-item">契合 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span>
+      <span class="score-item">爆款 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span>
+      <span class="score-item">总分 <span class="num">24</span></span>
+    </div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 完播率 · 收藏率（攻略属性）</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-05 周末探店 · 丑萌出片</span><span class="rank r-test">TOP 5</span></div>
+    <div class="combo"><span class="c-p">穿搭出片党</span><span class="c-b">BP-05 配色 + BP-06 联名</span><span class="c-s">SC-04 周末探店出片</span></div>
+    <div class="rowline"><span class="lb">拍法</span>低机位鞋+穿搭特写 + 闺蜜问答互动；多色鞋搭同一条裙子出片对比。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"丑萌丑萌的，拍照自带话题"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>骆驼丑萌穿搭多条 1k+ 赞（1300/1196/2086/3239）——已有多条自然流量验证，缺的是统一模板放大。</div>
+    <div class="scoreline">
+      <span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span>
+      <span class="score-item">契合 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span>
+      <span class="score-item">爆款 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span>
+      <span class="score-item">总分 <span class="num">23</span></span>
+    </div>
+    <span class="kpi">测试指标：<b>点赞率 · "求链接"评论 · 主页进店率</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-06 办公室久站 · 下班脚不酸</span><span class="rank r-test">TOP 6</span></div>
+    <div class="combo"><span class="c-p">久站久走脚感党</span><span class="c-b">BP-03 软弹 + BP-10 透气</span><span class="c-s">SC-07 办公室久站</span></div>
+    <div class="rowline"><span class="lb">拍法</span>讲台/柜台站一天，下班脱鞋脚踝不酸 vs 以前瘫沙发揉脚；软底回弹特写，话术带"回弹+支撑"数据。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"站一天脚不酸？这双鞋真的能救"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>通勤 2 万步 1.4 万赞验证"久站"需求；教师/导购人群可精准投放；注意"踩屎感伤足弓"科普风险——话术必须带支撑。</div>
+    <div class="scoreline">
+      <span class="score-item">人群 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span>
+      <span class="score-item">契合 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></span>
+      <span class="score-item">爆款 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span>
+      <span class="score-item">总分 <span class="num">23</span></span>
+    </div>
+    <span class="kpi">测试指标：<b>5 秒完播 · 评论区"我是老师/导购"自报职业占比</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-07 雨天通勤 · 防滑占位</span><span class="rank r-test">TOP 7</span></div>
+    <div class="combo"><span class="c-p">叠加：雨天通勤党</span><span class="c-b">BP-04 抓地防滑</span><span class="c-s">SC-06 雨天通勤</span></div>
+    <div class="rowline"><span class="lb">拍法</span>湿滑地面实拍 + 鞋底纹路特写 + 别人扶墙慢挪主角大步走。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"下雨天也能放心走"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>防滑是测评高频附加词但几乎无人单独立意——讲了的占位；雨季（华南 3-5 月）前是窗口期。</div>
+    <div class="scoreline">
+      <span class="score-item">人群 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span>
+      <span class="score-item">契合 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span>
+      <span class="score-item">爆款 <div class="bar"><i style="width:60%"></i></div><span class="num">6</span></span>
+      <span class="score-item">总分 <span class="num">20</span></span>
+    </div>
+    <span class="kpi">测试指标：<b>差异化占位 · 蓝海词搜索量变化</b></span>
+  </div>
+
+  <div class="strat">
+    <div class="shead"><span class="sname">ST-08 宽脚试鞋 · 商家没发现的蓝海</span><span class="rank r-pend">待确认</span></div>
+    <div class="combo"><span class="c-p">宽脚 / 大码党</span><span class="c-b">BP-03 软弹 + BP-10 透气</span><span class="c-s">SC-08 宽脚试鞋</span></div>
+    <div class="rowline"><span class="lb">拍法</span>一镜到底开箱：40 码宽脚女生套上鞋，脚趾自由活动不挤；"39 码也不像大帆船"。</div>
+    <div class="shoot"><b>口播：</b><span class="hk">"宽脚拇外翻的姐妹，这双终于不挤了"</span></div>
+    <div class="rowline"><span class="lb">为什么先测</span>本款已有"39 码不像大帆船"1.2k 赞真实好评；"大码不显脚大"571 赞、拇外翻话题 1.3 万赞——内容侧证据足，<b>只差商家确认鞋楦宽度</b>；确认后立即升级主攻。</div>
+    <div class="scoreline">
+      <span class="score-item">人群 <div class="bar"><i style="width:50%"></i></div><span class="num">待核验</span></span>
+      <span class="score-item">契合 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span>
+      <span class="score-item">爆款 <div class="bar"><i style="width:70%"></i></div><span class="num">7</span></span>
+      <span class="score-item">总分 <span class="num">待确认</span></span>
+    </div>
+    <span class="kpi">测试指标：<b>开箱完播 · "宽脚/拇外翻"评论占比 · 退货率（宽脚人群是关键）</b></span>
+  </div>
+
+  <!-- 一周排期 -->
+  <div class="sec-title"><span class="st">执行</span>第一周测试排期建议（单变量 A/B）</div>
+  <div class="plan">
+    <table>
+      <tr><th>优先级</th><th>内容方向</th><th>测试变量</th><th>对照</th></tr>
+      <tr><td><b>第一批</b>（周一）</td><td>ST-02 开学一周穿搭</td><td>变装卡点节奏</td><td>色卡陈列 vs 变装混剪</td></tr>
+      <tr><td><b>第一批</b>（周二）</td><td>ST-01 面试变装</td><td>前 2 秒钩子</td><td>恨天高皱眉 vs 直接上脚对比</td></tr>
+      <tr><td><b>第一批</b>（周三）</td><td>ST-03 聚会合照</td><td>共情开场</td><td>踮脚画面 vs 数据开场</td></tr>
+      <tr><td><b>第二批</b>（周四）</td><td>ST-04 旅游暴走</td><td>步数收尾</td><td>步数截图 vs 揉脚对比</td></tr>
+      <tr><td><b>第二批</b>（周五）</td><td>ST-05 周末探店</td><td>闺蜜问答钩子</td><td>问答 vs 纯展示</td></tr>
+      <tr><td><b>第三批</b>（周末）</td><td>ST-06 / ST-07</td><td>人群覆盖验证</td><td>久站实测 vs 防滑占位</td></tr>
+    </table>
+    <div class="legend" style="margin-top:10px;">规则：同一组只改一个变量；至少同时比较 5 秒完播、进房率、点赞率；跑 7 天看数据再决定扩量。</div>
+  </div>
+
+  <div class="todo"><b>待商家确认（决定 ST-08 是否升级）：</b>① 鞋楦宽度是否适合宽脚/大码人群（39-42 码实际楦宽）② 透气材质是否属实（BP-10 转正式）③ 免系鞋带/一脚蹬是否属实（内容侧高频提及但商品资料未写）。三项确认后，宽脚蓝海方向可直接进入主攻梯队。</div>
+
+  <div class="foot">本报告由「S4 内容策略组合报告」Skill 生成 · 原料 = S1 买点库 / S2 人群匹配表 / S3 场景需求卡（骆驼女鞋全流程）· 组合打分基于 S1-S3 已验证证据，2026-10-28</div>
+</div>
+</body>
+</html>
